@@ -1,0 +1,35 @@
+import {
+  PlusCircle,
+  Pencil,
+  ArrowLeftRight,
+  UserRoundCog,
+  DollarSign,
+  Receipt,
+  ShieldCheck,
+  BadgeCheck,
+  Tag,
+  ToggleRight,
+  ToggleLeft,
+  CalendarClock,
+  Mail,
+  type LucideIcon,
+} from "lucide-react";
+import type { ActivityType } from "@/lib/types";
+
+export const activityIconMap: Record<ActivityType, { icon: LucideIcon; tone: string }> = {
+  "Reserva creada": { icon: PlusCircle, tone: "text-forest bg-forest/10" },
+  "Reserva modificada": { icon: Pencil, tone: "text-olive bg-olive/10" },
+  "Cambio de cabaña": { icon: ArrowLeftRight, tone: "text-sky-700 bg-sky-50" },
+  "Cambio de huésped": { icon: UserRoundCog, tone: "text-olive bg-olive/10" },
+  "Cambio de precio": { icon: DollarSign, tone: "text-[#8a7940] bg-gold/20" },
+  "Pago registrado": { icon: Receipt, tone: "text-forest bg-forest/10" },
+  "Comprobante recibido": { icon: Receipt, tone: "text-sky-700 bg-sky-50" },
+  "Seña verificada": { icon: ShieldCheck, tone: "text-forest bg-forest/10" },
+  "Reserva confirmada": { icon: BadgeCheck, tone: "text-forest bg-forest/10" },
+  "Oferta creada": { icon: Tag, tone: "text-[#8a7940] bg-gold/20" },
+  "Oferta modificada": { icon: Tag, tone: "text-[#8a7940] bg-gold/20" },
+  "Oferta activada": { icon: ToggleRight, tone: "text-forest bg-forest/10" },
+  "Oferta desactivada": { icon: ToggleLeft, tone: "text-charcoal/50 bg-charcoal/6" },
+  "Cambio de disponibilidad": { icon: CalendarClock, tone: "text-sky-700 bg-sky-50" },
+  "Email enviado": { icon: Mail, tone: "text-olive bg-olive/10" },
+};

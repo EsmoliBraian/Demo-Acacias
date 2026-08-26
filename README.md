@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Las Acacias Cabañas — Demo interactiva
 
-## Getting Started
+Propuesta comercial interactiva para Las Acacias Cabañas: web pública premium + sistema de reservas y gestión.
 
-First, run the development server:
+**Esto es una demo de presentación**, no un producto en producción. No hay backend, base de datos ni integraciones reales (WhatsApp, email, Mercado Pago, banco). Todo el estado se maneja en el cliente con React Context + `localStorage`, sobre datos simulados en `src/data/mockData.ts`.
+
+## Stack
+
+Next.js (App Router, export estático) · React · TypeScript · Tailwind CSS v4 · Recharts · Lucide React
+
+## Desarrollo local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrí [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/` — landing pública con motor de reservas, ofertas y flujo de seña por transferencia + WhatsApp.
+- `/demo/dashboard` — panel administrativo (reservas, calendario, cabañas, huéspedes, pagos, ofertas, reportes, mensajes, automatizaciones, historial, configuración).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Usá **Reiniciar demo** en el panel administrativo para volver todos los datos a su estado inicial entre presentaciones.
 
-## Learn More
+## Build y deploy
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`npm run build` genera un export estático en `./out` (configurado vía `output: "export"` en `next.config.ts`). El workflow en `.github/workflows/deploy.yml` publica automáticamente ese export a GitHub Pages en cada push a `main`.
