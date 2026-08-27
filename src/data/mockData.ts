@@ -25,7 +25,7 @@ export const cabins: Cabin[] = [
     lowSeasonPrice: 58000,
     status: "Disponible",
     amenities: ["WiFi", "Parrilla privada", "Calefacción", "Ropa de cama"],
-    images: ["/images/cabanas/cabana2.jpg", "/images/cabanas/cabana4.jpg"],
+    images: ["/images/real/cabana1.jpg"],
     description:
       "Cabaña íntima para dos, ideal para escapadas de fin de semana en plena naturaleza.",
   },
@@ -41,7 +41,7 @@ export const cabins: Cabin[] = [
     lowSeasonPrice: 68000,
     status: "Ocupada",
     amenities: ["WiFi", "Parrilla privada", "Cocina equipada", "Estufa a leña"],
-    images: ["/images/cabanas/cabana1.jpg", "/images/cabanas/cabana3.jpg"],
+    images: ["/images/real/cabana2.jpg"],
     description:
       "Dos habitaciones y living integrado, pensada para familias chicas o grupos de amigos.",
   },
@@ -63,7 +63,7 @@ export const cabins: Cabin[] = [
       "Deck con vista al bosque",
       "Estufa a leña",
     ],
-    images: ["/images/cabanas/cabana5.jpg", "/images/cabanas/cabana3.jpg"],
+    images: ["/images/cabanas/cabana3.jpg"],
     description:
       "La más solicitada: tres habitaciones, deck privado y vista directa al bosque de acacias.",
   },
@@ -79,7 +79,7 @@ export const cabins: Cabin[] = [
     lowSeasonPrice: 74000,
     status: "Mantenimiento",
     amenities: ["WiFi", "Parrilla privada", "Cocina equipada", "Jacuzzi exterior"],
-    images: ["/images/casas-campo/casa-campo1.jpg", "/images/casas-campo/casa-campo2.jpg"],
+    images: ["/images/real/cabana4.jpg"],
     description: "Casa de campo amplia con jacuzzi exterior y galería techada.",
   },
   {
@@ -100,7 +100,7 @@ export const cabins: Cabin[] = [
       "Pileta compartida cercana",
       "Cochera",
     ],
-    images: ["/images/casas-campo/casa-campo4.jpg", "/images/casas-campo/casa-campo5.jpg"],
+    images: ["/images/real/cabana5.jpg"],
     description:
       "La más grande del complejo, perfecta para grupos numerosos o dos familias.",
   },
@@ -635,14 +635,14 @@ export const initialSettings: Settings = {
 };
 
 export const heroImages = [
-  "/images/hero/foto1.jpg",
+  "/images/real/inicio.jpg",
   "/images/hero/foto2.jpg",
   "/images/hero/foto3.jpg",
 ];
 
 export const ambienceImages = {
-  pool: "/images/piletas/piletas1.jpg",
-  park: "/images/parque/parque1.jpg",
-  clubHouse: "/images/club-house/club-house2.jpg",
+  pool: "/images/real/piletas.jpg",
+  park: "/images/real/parque.jpg",
+  clubHouse: "/images/real/club-house.jpg",
   games: "/images/parque/juegos1-full.jpg",
 };
