@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { CabinStatusBadge } from "@/components/ui/Badge";
 import { CabinDetailModal } from "@/components/cabanas/CabinDetailModal";
 import { useApp } from "@/lib/store";
-import { formatCurrency } from "@/lib/utils";
+import { assetPath, formatCurrency } from "@/lib/utils";
 
 export default function CabanasPage() {
   const { cabins, offers } = useApp();
@@ -29,7 +29,7 @@ export default function CabanasPage() {
               <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow duration-300 group">
                 <div className="relative h-44">
                   <Image
-                    src={c.images[0]}
+                    src={assetPath(c.images[0])}
                     alt={c.name}
                     fill
                     unoptimized

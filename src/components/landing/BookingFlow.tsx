@@ -10,7 +10,7 @@ import { useApp } from "@/lib/store";
 import { useToast } from "@/components/ui/Toast";
 import { TermsModal } from "./TermsModal";
 import { GuestReservationSummary } from "@/components/reservas/EmailPreviewModal";
-import { formatCurrency, formatDate, nightsBetween } from "@/lib/utils";
+import { assetPath, formatCurrency, formatDate, nightsBetween } from "@/lib/utils";
 import type { Reservation } from "@/lib/types";
 
 type Step = "resumen" | "datos" | "pago" | "exito";
@@ -148,7 +148,7 @@ export function BookingFlow({
         {step === "resumen" && (
           <div>
             <div className="relative h-40 rounded-xl overflow-hidden mb-5">
-              <Image src={cabin.images[0]} alt={cabin.name} fill unoptimized className="object-cover" />
+              <Image src={assetPath(cabin.images[0])} alt={cabin.name} fill unoptimized className="object-cover" />
             </div>
             <div className="grid grid-cols-2 gap-3 mb-5">
               <div>

@@ -10,7 +10,7 @@ import { Select } from "@/components/ui/Field";
 import { UpdatePriceModal } from "./UpdatePriceModal";
 import { useApp } from "@/lib/store";
 import { useToast } from "@/components/ui/Toast";
-import { formatCurrency, formatDateTime } from "@/lib/utils";
+import { assetPath, formatCurrency, formatDateTime } from "@/lib/utils";
 import type { Cabin, CabinStatus } from "@/lib/types";
 
 const priceRows: { key: "base" | "finde" | "temporada_alta" | "temporada_baja"; label: string; field: keyof Cabin }[] = [
@@ -48,7 +48,7 @@ export function CabinDetailModal({
         <div className="grid grid-cols-2 gap-2 mb-5 rounded-xl overflow-hidden">
           {cabin.images.map((img, i) => (
             <div key={img} className={`relative h-40 ${i === 0 ? "col-span-2 h-52" : ""}`}>
-              <Image src={img} alt={cabin.name} fill className="object-cover" unoptimized />
+              <Image src={assetPath(img)} alt={cabin.name} fill className="object-cover" unoptimized />
             </div>
           ))}
         </div>

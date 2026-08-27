@@ -5,6 +5,7 @@ import { CalendarDays, Users, Search } from "lucide-react";
 import { Label, Input, Select } from "@/components/ui/Field";
 import { Button } from "@/components/ui/Button";
 import { heroImages } from "@/data/mockData";
+import { assetPath } from "@/lib/utils";
 
 export interface SearchCriteria {
   checkIn: string;
@@ -26,7 +27,7 @@ export function Hero({
   return (
     <section id="inicio" className="relative pt-28 sm:pt-32 pb-40 sm:pb-48">
       <div className="absolute inset-0 -z-10">
-        <Image src={heroImages[0]} alt="Las Acacias Cabañas" fill priority unoptimized className="object-cover" />
+        <Image src={assetPath(heroImages[0])} alt="Las Acacias Cabañas" fill priority unoptimized className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/35 to-charcoal/50" />
       </div>
 

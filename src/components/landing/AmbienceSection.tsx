@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ambienceImages } from "@/data/mockData";
+import { assetPath } from "@/lib/utils";
 
 export function AmbienceSection() {
   return (
@@ -32,13 +33,13 @@ export function AmbienceSection() {
 
           <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
             <div className="relative h-64 rounded-2xl overflow-hidden col-span-2">
-              <Image src={ambienceImages.pool} alt="Pileta Las Acacias" fill unoptimized className="object-cover" />
+              <Image src={assetPath(ambienceImages.pool)} alt="Pileta Las Acacias" fill unoptimized className="object-cover" />
             </div>
             <div className="relative h-40 rounded-2xl overflow-hidden">
-              <Image src={ambienceImages.park} alt="Parque Las Acacias" fill unoptimized className="object-cover" />
+              <Image src={assetPath(ambienceImages.park)} alt="Parque Las Acacias" fill unoptimized className="object-cover" />
             </div>
             <div className="relative h-40 rounded-2xl overflow-hidden">
-              <Image src={ambienceImages.clubHouse} alt="Club House Las Acacias" fill unoptimized className="object-cover" />
+              <Image src={assetPath(ambienceImages.clubHouse)} alt="Club House Las Acacias" fill unoptimized className="object-cover" />
             </div>
           </div>
         </div>

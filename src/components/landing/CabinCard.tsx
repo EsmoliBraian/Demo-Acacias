@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Users, BedDouble, Bath } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useApp } from "@/lib/store";
-import { formatCurrency, nightsBetween } from "@/lib/utils";
+import { assetPath, formatCurrency, nightsBetween } from "@/lib/utils";
 import type { Cabin } from "@/lib/types";
 
 export function CabinCard({
@@ -35,7 +35,7 @@ export function CabinCard({
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-forest/8 hover:shadow-lg transition-shadow duration-300 group">
       <div className="relative h-52">
-        <Image src={cabin.images[0]} alt={cabin.name} fill unoptimized className="object-cover group-hover:scale-105 transition-transform duration-500" />
+        <Image src={assetPath(cabin.images[0])} alt={cabin.name} fill unoptimized className="object-cover group-hover:scale-105 transition-transform duration-500" />
         {offer && (
           <span className="absolute top-3 right-3 bg-gold text-charcoal text-[10px] font-bold px-2.5 py-1 rounded-full">
             {offer.type === "porcentaje" ? `${offer.discountValue}% OFF` : offer.type === "noche_gratis" ? "NOCHE GRATIS" : "OFERTA"}
