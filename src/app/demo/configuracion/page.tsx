@@ -49,6 +49,11 @@ export default function ConfiguracionPage() {
               <Label>Dirección</Label>
               <Input value={complexInfo.address} onChange={(e) => setComplexInfo({ ...complexInfo, address: e.target.value })} />
             </div>
+            <div>
+              <Label>Link de Google Maps</Label>
+              <Input value={complexInfo.mapsUrl} onChange={(e) => setComplexInfo({ ...complexInfo, mapsUrl: e.target.value })} />
+              <p className="text-[11px] text-charcoal/45 mt-1">Se usa en el botón "Cómo llegar" de la web pública.</p>
+            </div>
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <Label>Teléfono</Label>

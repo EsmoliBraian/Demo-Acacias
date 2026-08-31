@@ -211,6 +211,9 @@ export interface ComplexInfo {
   hours: string;
   checkInWindow: string;
   checkOutWindow: string;
+  mapsUrl: string;
+  mapsLat: number;
+  mapsLng: number;
 }
 
 export interface Settings {

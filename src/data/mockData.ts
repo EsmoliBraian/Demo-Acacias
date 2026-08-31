@@ -605,13 +605,17 @@ export const automations: Automation[] = [
 export const initialSettings: Settings = {
   complexInfo: {
     name: "Las Acacias Cabañas",
-    address: "Ruta 7 km 112, Villa General Belgrano, Córdoba",
-    phone: "+54 351 400-1122",
+    address: "Von Bulow y Drago, Sierra de la Ventana, Partido de Tornquist, Buenos Aires",
+    phone: "+54 291 491-5262",
     whatsapp: WHATSAPP_NUMBER,
     email: "reservas@lasacacias.com.ar",
     hours: "Lunes a domingo de 9:00 a 21:00 hs",
     checkInWindow: "14:00 a 20:00",
     checkOutWindow: "08:00 a 11:00",
+    mapsUrl:
+      "https://www.google.com/maps/place/Acacias+Country+Club+-+Standard+Bungalow/@-38.1349983,-61.8047739,562m/data=!3m1!1e3!4m15!1m2!2m1!1sacacias!3m11!1s0x95eceeb138c59cff:0x961e471709f875c!5m2!4m1!1i2!8m2!3d-38.1349983!4d-61.8015595!10e7!15sCgdhY2FjaWFzkgEPdmFjYXRpb25fcmVudGFs4AEA!16s%2Fg%2F11nbmqmbkm!17BQ0FF?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D",
+    mapsLat: -38.1349983,
+    mapsLng: -61.8015595,
   },
   bankData: {
     bank: "Banco de ejemplo",
