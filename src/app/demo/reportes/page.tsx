@@ -133,7 +133,7 @@ export default function ReportesPage() {
           <CardHeader>
             <CardTitle>Origen de reservas</CardTitle>
           </CardHeader>
-          <CardBody className="h-60">
+          <CardBody className="h-48">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie data={originData} dataKey="value" nameKey="name" innerRadius={44} outerRadius={68} paddingAngle={2}>
@@ -145,6 +145,15 @@ export default function ReportesPage() {
               </PieChart>
             </ResponsiveContainer>
           </CardBody>
+          <div className="px-5 pb-5 flex flex-col gap-1.5">
+            {originData.map((o, i) => (
+              <div key={o.name} className="flex items-center gap-2 text-xs text-charcoal/70">
+                <span className="w-2 h-2 rounded-full" style={{ background: CHART_COLORS[i % CHART_COLORS.length] }} />
+                {o.name}
+                <span className="ml-auto font-medium text-charcoal">{o.value}%</span>
+              </div>
+            ))}
+          </div>
         </Card>
       </div>
 
